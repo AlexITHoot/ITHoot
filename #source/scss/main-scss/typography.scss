@@ -1,0 +1,115 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h7,
+.h8 {
+	color: $white;
+	font-family: inherit;
+	letter-spacing: 0.01em;
+	line-height: 115%;
+}
+
+h1 {
+	font-weight: 900;
+	font-size: 19rem;
+}
+
+h2 {
+	font-weight: 900;
+	font-size: 10.4rem;
+}
+
+h3 {
+	font-weight: 900;
+	font-size: 6.6rem;
+}
+
+h4 {
+	font-weight: 900;
+	font-size: 5.2rem;
+}
+
+h5 {
+	font-weight: 600;
+	font-size: 4.8rem;
+}
+
+h6 {
+	font-weight: 900;
+	font-size: 3.6rem;
+
+	&.h7 {
+		font-weight: 900;
+		font-size: 3.2rem;
+	}
+
+	&.h8 {
+		font-weight: 600;
+		font-size: 2.8rem;
+	}
+}
+
+.body {
+	letter-spacing: 0.01em;
+
+	&.big {
+		font-weight: 600;
+		font-size: 2.6rem;
+		line-height: 115%;
+	}
+
+	&.biglight {
+		font-weight: 300;
+		font-size: 2.6rem;
+		line-height: 150%;
+	}
+
+	&.med {
+		font-weight: 300;
+		font-size: 2.4rem;
+		line-height: 150%;
+	}
+
+	&.medBolt {
+		font-weight: 600;
+		font-size: 2.2rem;
+		line-height: 150%;
+	}
+
+	&.small {
+		font-weight: 300;
+		font-size: 2rem;
+		line-height: 150%;
+	}
+
+	&.tiny {
+		font-weight: 300;
+		font-size: 1.8rem;
+		line-height: 150%;
+	}
+
+	&.tinyBold {
+		font-weight: 600;
+		font-size: 1.8rem;
+		line-height: 150%;
+	}
+
+	&.micro {
+		font-weight: 300;
+		font-size: 1.4rem;
+		line-height: 150%;
+	}
+}
+
+a {
+	font-size: 1.8rem;
+	line-height: 1.2;
+	color: $white;
+	font-family: inherit;
+	transition: all .3s ease;
+
+	&:hover {}
+}
