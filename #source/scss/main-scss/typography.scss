@@ -105,11 +105,15 @@ h6 {
 }
 
 a {
-	font-size: 1.8rem;
-	line-height: 1.2;
-	color: $white;
 	font-family: inherit;
+	font-size: 1.8rem;
+	line-height: 1.5;
+	font-weight: 300;
+	color: $dark;
+	letter-spacing: 0.01em;
 	transition: all .3s ease;
 
-	&:hover {}
+	&:hover {
+		color: $blue;
+	}
 }
