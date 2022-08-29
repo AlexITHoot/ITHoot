@@ -15,16 +15,40 @@ h6,
 h1 {
 	font-weight: 900;
 	font-size: 19rem;
+
+	@include respond(m-screen) {
+		font-size: 11.2rem;
+	}
+
+	@include respond(s-screen) {
+		font-size: 7.2rem;
+	}
 }
 
 h2 {
 	font-weight: 900;
 	font-size: 10.4rem;
+
+	@include respond(m-screen) {
+		font-size: 8rem;
+	}
+
+	@include respond(s-screen) {
+		font-size: 4rem;
+	}
 }
 
 h3 {
 	font-weight: 900;
 	font-size: 6.6rem;
+
+	@include respond(m-screen) {
+		font-size: 5.2rem;
+	}
+
+	@include respond(s-screen) {
+		font-size: 3.2rem;
+	}
 }
 
 h4 {
@@ -40,16 +64,17 @@ h5 {
 h6 {
 	font-weight: 900;
 	font-size: 3.6rem;
+}
 
-	&.h7 {
-		font-weight: 900;
-		font-size: 3.2rem;
-	}
+.h7 {
+	font-weight: 900;
+	font-size: 3.2rem;
+}
 
-	&.h8 {
-		font-weight: 600;
-		font-size: 2.8rem;
-	}
+.h8 {
+	font-weight: 600;
+	font-size: 2.8rem;
+	line-height: 150%;
 }
 
 .body {
@@ -77,6 +102,15 @@ h6 {
 		font-weight: 600;
 		font-size: 2.2rem;
 		line-height: 150%;
+
+		@include respond(m-screen) {
+			font-size: 2rem;
+		}
+
+		@include respond(s-screen) {
+			font-weight: 300;
+			font-size: 1.8rem;
+		}
 	}
 
 	&.small {
@@ -104,6 +138,18 @@ h6 {
 	}
 }
 
+p,
+span {
+	font-weight: 300;
+	font-size: 2.4rem;
+	line-height: 1.5;
+	color: $white;
+
+	@include respond(s-screen) {
+		font-size: 1.6rem;
+	}
+}
+
 a {
 	font-family: inherit;
 	font-size: 1.8rem;
@@ -115,5 +161,9 @@ a {
 
 	&:hover {
 		color: $blue;
+	}
+
+	@include respond(s-screen) {
+		font-size: 1.6rem;
 	}
 }

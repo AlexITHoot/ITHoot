@@ -16,7 +16,7 @@ html {
 
 body {
 	color: $dark;
-	background-color: $dark-blue;
+	background-color: $white;
 	font-family: $fontfamily;
 	overflow-x: hidden;
 }
@@ -35,29 +35,25 @@ body {
 
 // Main grid
 .container {
-	max-width: 144rem;
+	max-width: 125rem;
 	margin: 0 auto;
 	height: 100%;
 	width: 100%;
-	padding: 0 11.2rem;
+	padding: 0 1.5rem;
 
-	@include respond(lg-screen) {
-		padding: 0 8.4rem;
-	}
-
-	@include respond(m-screen) {
-		padding: 0 4rem;
+	@include respond(s-screen) {
+		padding: 0 3.2rem;
 	}
 }
 
 .container-header {
-	max-width: 144rem;
+	max-width: 125rem;
 	margin: 0 auto;
 	height: 100%;
 	width: 100%;
-	padding: 0 11.2rem;
+	padding: 0 1.5rem;
 
-	@include respond(lg-screen) {
+	@include respond(m-screen) {
 		padding: 0 8rem;
 	}
 
@@ -66,8 +62,44 @@ body {
 	}
 }
 
+// .fp-watermark {
+// 	display: none;
+// }
+
+// .section {
+// 	&:nth-of-type(1) {
+// 		background-color: rgb(250, 235, 215);
+// 		justify-content: flex-start;
+// 	}
+
+// 	&:nth-of-type(2) {
+// 		background-color: rgb(251, 217, 172);
+// 	}
+
+// 	&:nth-of-type(3) {
+// 		background-color: rgb(245, 182, 100);
+// 	}
+
+// 	&:nth-of-type(4) {
+// 		background-color: rgb(240, 139, 7);
+// 		justify-content: end;
+// 	}
+// }
 
 // Connecting pages style
 @import "main-scss/header.scss";
 @import "main-scss/footer.scss";
+@import "main-scss/swiper.scss";
 // @import "main-scss/form.scss";
+
+@import "main-page/prew-page.scss";
+@import "main-page/statistics.scss";
+@import "main-page/innovations.scss";
+@import "main-page/solution.scss";
+@import "main-page/tech-stack.scss";
+@import "main-page/insights.scss";
+@import "main-page/contact-block.scss";
+
+@import "project-page/project-page.scss";
+
+@import "about/about.scss";

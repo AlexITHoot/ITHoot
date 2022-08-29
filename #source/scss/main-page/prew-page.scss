@@ -1,0 +1,47 @@
+.prew-page {
+	border-top: 1px solid #E9E9E9;
+	padding: 9rem 0 0 0;
+	height: calc(100vh - 11.3rem);
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 35%;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		background: url(/img/icons/main-img.svg) no-repeat center/contain;
+	}
+
+	h1 {
+		background: linear-gradient(87.95deg, #0071BC 0%, #00C0F3 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		z-index: 1;
+	}
+}
+
+@include respond(m-screen) {
+	.prew-page {
+		padding: 7.25rem 0 0 0;
+		height: calc(100vh - 8rem);
+
+		&::before {
+			left: 30%;
+		}
+	}
+}
+
+@include respond(m-screen) {
+	.prew-page {
+		padding: 8.8rem 0 0 0;
+		height: calc(100vh - 8.4rem);
+
+		&::before {
+			left: 20%;
+		}
+	}
+}
