@@ -1,0 +1,79 @@
+.accordion-custom {
+	overflow: hidden;
+	transition: all 0.3s ease;
+	border-radius: .8rem;
+
+	.accordion-custom-header {
+		background: linear-gradient(87.95deg, #0071BC 0%, #00C0F3 100%);
+		display: flex;
+		align-items: center;
+		padding: 3.2rem;
+		position: relative;
+		overflow: hidden;
+
+		.name-bg {
+			color: $bright-blue;
+			position: absolute;
+			bottom: -30%;
+			font-size: 5.6rem;
+			font-weight: 900;
+			line-height: 1.5;
+			left: 50%;
+			transform: translateX(-50%);
+			white-space: nowrap;
+		}
+
+		.group-wrapper {
+			display: flex;
+			align-items: center;
+			margin-left: auto;
+			margin-right: 6%;
+
+			p {
+				margin-left: 1.3rem;
+				font-weight: 600;
+				font-size: 1.6rem;
+				line-height: 150%;
+				color: $white;
+			}
+		}
+
+		.chevron {
+			transform: rotate(90deg);
+			transition: all 0.3s ease;
+		}
+	}
+
+	.accordion-body {
+		background: #0071BC;
+	}
+
+	&.collapsed {
+		.accordion-custom-header {
+			.chevron {
+				transform: rotate(0);
+			}
+		}
+	}
+}
+
+@include respond(s-screen) {
+	.accordion-custom {
+		.accordion-custom-header {
+			padding: 3.2rem 1.6rem;
+
+			.name-bg {
+				font-size: 2.6rem;
+				bottom: -15%;
+			}
+
+			.group-wrapper {
+				display: none;
+			}
+
+			.chevron {
+				margin-left: auto;
+			}
+		}
+	}
+}

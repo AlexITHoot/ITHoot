@@ -75,6 +75,10 @@ h6 {
 	font-weight: 600;
 	font-size: 2.8rem;
 	line-height: 150%;
+
+	@include respond(s-screen) {
+		font-size: 2.4rem;
+	}
 }
 
 .body {
@@ -152,15 +156,20 @@ span {
 
 a {
 	font-family: inherit;
-	font-size: 1.8rem;
+	font-size: 2.2rem;
 	line-height: 1.5;
-	font-weight: 300;
-	color: $dark;
+	font-weight: 600;
+	color: $bright-blue;
 	letter-spacing: 0.01em;
 	transition: all .3s ease;
 
 	&:hover {
 		color: $blue;
+	}
+
+	&:active,
+	&:focus {
+		color: $dark;
 	}
 
 	@include respond(s-screen) {

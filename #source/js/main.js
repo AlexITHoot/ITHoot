@@ -24,6 +24,78 @@ navbar.addEventListener('click', function (e) {
 // });
 
 
+let accordionCustom = document.querySelectorAll('.accordion-custom');
+
+accordionCustom.forEach(function (el) {
+	if (el.querySelector('.accordion-custom-header')) {
+		el.querySelector('.accordion-custom-header').addEventListener('click', function () {
+			el.classList.toggle('collapsed');
+
+			if (el.classList.contains('collapsed')) {
+				closeAccording(el);
+			} else {
+				openAccording(el);
+			}
+		});
+	}
+});
+
+function accordionPreload() {
+	accordionCustom.forEach(function (el) {
+		if (el.classList.contains('collapsed')) {
+			const elStyle = el.currentStyle || window.getComputedStyle(el);
+			if (el.querySelector('.accordion-custom-header')) {
+				const accordionHeader = el.querySelector('.accordion-custom-header');
+				el.style.height = `${accordionHeader.offsetHeight + (parseInt(elStyle.paddingTop) * 2)}px`;
+			}
+		} else {
+			openAccording(el);
+		}
+	});
+}
+
+function openAccording(element) {
+	const bodyHeight = element.querySelector('.accordion-body').offsetHeight;
+	const accordionHeader = element.querySelector('.accordion-custom-header');
+	let elStyle = element.currentStyle || window.getComputedStyle(element);
+
+	const accordionHeaderHeight = accordionHeader.offsetHeight + (parseInt(elStyle.paddingTop) * 2);
+	element.style.height = `${bodyHeight + accordionHeaderHeight + (parseInt(elStyle.paddingTop) * 2)}px`;
+}
+
+function closeAccording(element) {
+	const accordionHeader = element.querySelector('.accordion-custom-header');
+	let elStyle = element.currentStyle || window.getComputedStyle(element);
+	const accordionHeaderHeight = accordionHeader.offsetHeight + (parseInt(elStyle.paddingTop) * 2);
+
+	element.style.height = `${accordionHeaderHeight}px`;
+}
+
+document.addEventListener('DOMContentLoaded', accordionPreload);
+
+
+//LoadImgPrew
+
+function isFileImage(file) {
+	return file && file['type'].split('/')[0] === 'image';
+}
+
+function loadFiles(e) {
+	const output = document.querySelector('.file-output');
+
+	if (e.target.files) {
+		for (let i = 0; i < e.target.files.length; i++) {
+			if (isFileImage(e.target.files[i])) {
+				console.log(e.target.files[i]);
+				output.innerHTML = `${e.target.files[i].name}`;
+			}
+		}
+	}
+};
+
+document.querySelector('.group.file input').addEventListener('change', loadFiles);
+
+
 
 import { S as E, P as $ } from "./vendor.js";
 const M = function () {

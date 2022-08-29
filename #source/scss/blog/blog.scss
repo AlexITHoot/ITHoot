@@ -1,0 +1,60 @@
+.blog {
+	padding: 6.4rem 0;
+
+	h2 {
+		color: $dark;
+		margin-bottom: 1.6rem;
+	}
+
+	p.body.medBolt {
+		color: $dark;
+		margin-bottom: 5.6rem;
+	}
+
+	.cards-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+
+		.card {
+			width: calc(33.3% - 3.2rem);
+			min-width: initial;
+			margin-bottom: 4.8rem;
+		}
+	}
+
+	.recommended {
+		margin-top: calc(13.6rem - 4.8rem);
+		margin-bottom: calc(14.4rem - 6.4rem);
+
+		h4 {
+			color: $dark;
+			text-align: center;
+			margin-bottom: 5.6rem;
+		}
+	}
+}
+
+@include respond(m-screen) {
+	.blog {
+		.cards-wrapper {
+			.card {
+				width: calc(50% - 3.2rem);
+				min-width: initial;
+				margin-bottom: 3.2rem;
+			}
+		}
+	}
+}
+
+@include respond(s-screen) {
+	.blog {
+		.cards-wrapper {
+			.card {
+				width: 100%;
+				margin: 0;
+				min-width: initial;
+				margin-bottom: 2.4rem;
+			}
+		}
+	}
+}

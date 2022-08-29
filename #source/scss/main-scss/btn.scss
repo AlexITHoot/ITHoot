@@ -108,8 +108,10 @@
 	}
 
 	&.contact {
+		font-weight: 900;
 		font-size: 2.6rem;
-		padding: 1.5rem 2.5rem;
+		line-height: 1;
+		padding: 1.3rem 2.5rem 1.7rem;
 		max-width: 32rem;
 		color: $dark;
 		background: linear-gradient(87.95deg, #6AEA06 0%, #00C0F3 100%);
