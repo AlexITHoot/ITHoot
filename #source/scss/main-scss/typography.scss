@@ -16,6 +16,10 @@ h1 {
 	font-weight: 900;
 	font-size: 19rem;
 
+	@include respond(lg-screen) {
+		font-size: 15.2rem;
+	}
+
 	@include respond(m-screen) {
 		font-size: 11.2rem;
 	}
@@ -54,6 +58,14 @@ h3 {
 h4 {
 	font-weight: 900;
 	font-size: 5.2rem;
+
+	@include respond(m-screen) {
+		font-size: 4rem;
+	}
+
+	@include respond(s-screen) {
+		font-size: 3rem;
+	}
 }
 
 h5 {
@@ -69,6 +81,14 @@ h6 {
 .h7 {
 	font-weight: 900;
 	font-size: 3.2rem;
+
+	@include respond(m-screen) {
+		font-size: 2.6rem;
+	}
+
+	@include respond(s-screen) {
+		font-size: 2.4rem;
+	}
 }
 
 .h8 {
@@ -88,6 +108,10 @@ h6 {
 		font-weight: 600;
 		font-size: 2.6rem;
 		line-height: 115%;
+
+		@include respond(s-screen) {
+			font-size: 1.6rem;
+		}
 	}
 
 	&.biglight {
@@ -100,9 +124,17 @@ h6 {
 		font-weight: 300;
 		font-size: 2.4rem;
 		line-height: 150%;
+
+		@include respond(m-screen) {
+			font-size: 2.2rem;
+		}
+
+		@include respond(s-screen) {
+			font-size: 1.8rem;
+		}
 	}
 
-	&.medBolt {
+	&.medBold {
 		font-weight: 600;
 		font-size: 2.2rem;
 		line-height: 150%;

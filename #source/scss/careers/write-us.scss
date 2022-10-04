@@ -1,17 +1,18 @@
 .write-us {
 	background: linear-gradient(90deg, #121716 0.08%, #0C283A 100.01%);
-	padding: 12.8rem 0;
+	padding: $XL3 0;
+	width: 100%;
 
 	h3 {
-		margin-bottom: 4rem;
+		margin-bottom: $M;
 	}
 
 	.form {
 		display: flex;
 		justify-content: space-between;
-		margin-bottom: 7.2rem;
+		margin-bottom: $XL;
 
-		.from-col {
+		.form-col {
 			width: 49%;
 
 			.group.textarea textarea {
@@ -34,40 +35,48 @@
 
 @include respond(m-screen) {
 	.write-us {
-		padding: 10.4rem 0;
+		padding: $XL2 0;
 
 		h3 {
-			margin-bottom: 3.2rem;
+			margin-bottom: $M;
 		}
 
 		.form {
 			flex-wrap: wrap;
-			margin-bottom: 5.6rem;
+			margin-bottom: $L;
 
-			.from-col {
+			.form-col {
 				width: 100%;
 
 				.group {
-					margin-bottom: 2.4rem !important;
+					margin-bottom: $S  !important;
 				}
 			}
+		}
+
+		.btn {
+			max-width: 27rem;
 		}
 	}
 }
 
 @include respond(s-screen) {
 	.write-us {
-		padding: 8rem 0 12.8rem;
+		padding: $XL 0 $XL3;
 
 		.form {
 			flex-wrap: wrap;
-			margin-bottom: 3.2rem;
+			margin-bottom: $M;
 
-			.from-col {
+			.form-col {
 				.group {
-					margin-bottom: 1.6rem !important;
+					margin-bottom: $XS  !important;
 				}
 			}
+		}
+
+		.btn {
+			max-width: 22rem;
 		}
 	}
 }

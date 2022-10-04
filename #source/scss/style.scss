@@ -74,11 +74,10 @@ body {
 @import "main-page/statistics.scss";
 @import "main-page/innovations.scss";
 @import "main-page/solution.scss";
-@import "main-page/tech-stack.scss";
 @import "main-page/insights.scss";
 @import "main-page/contact-block.scss";
 
-@import "project-page/project-page.scss";
+@import "projects/projects.scss";
 
 @import "about/about.scss";
 
@@ -88,3 +87,7 @@ body {
 @import "blog/blog.scss";
 
 @import "contact/contact.scss";
+
+@import "thanks/thanks.scss";
+
+@import "services-web/services-web.scss";

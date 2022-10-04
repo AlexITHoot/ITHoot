@@ -1,6 +1,27 @@
 .solution {
+	padding: $XL3 0 $XL2;
+	overflow: hidden;
+
+	.container {
+		position: relative;
+
+		&:before {
+			content: "";
+			position: absolute;
+			bottom: -1rem;
+			right: -12rem;
+			transform: translateY(50%);
+			width: 100%;
+			max-width: 89.6rem;
+			max-height: 47.4rem;
+			height: 100%;
+			background: url(/img/icons/solition-bg.svg) center/contain no-repeat;
+			z-index: -1;
+		}
+	}
+
 	.section-title {
-		margin-bottom: 6.4rem;
+		margin-bottom: $L;
 
 		h3 {
 			color: $dark;
@@ -10,17 +31,21 @@
 
 	.solution-tabs {
 		.nav-tabs {
-			margin: 0 -1.6rem;
+			display: flex;
+			margin: 0 -$XS;
 			border-bottom: none;
-			margin-bottom: 12rem;
+			margin-bottom: $XL2;
 
 			.nav-link {
+				display: flex;
+				align-items: center;
+				justify-content: center;
 				width: 100%;
 				max-width: 28rem;
 				background: $dark-blue;
-				border-radius: 3.2rem;
-				padding: 2.4rem 4rem;
-				margin: 0 1.6rem 1.5rem;
+				border-radius: $M;
+				padding: $S $M;
+				margin: 0 $XS $S;
 				border: none;
 				isolation: auto;
 				position: relative;
@@ -41,7 +66,7 @@
 					height: 0.2rem;
 					background-color: $bright-blue;
 					z-index: 2;
-					border-radius: 3.2rem;
+					border-radius: $M;
 				}
 
 				&:after {
@@ -53,7 +78,7 @@
 					height: 100%;
 					background: linear-gradient(87.95deg, #0071BC 0%, #00C0F3 100%);
 					z-index: 1;
-					border-radius: 3.2rem;
+					border-radius: 3.1rem;
 					transition: all .3s;
 					opacity: 0;
 				}
@@ -79,9 +104,6 @@
 				p {
 					position: relative;
 					text-align: center;
-					font-weight: 600;
-					font-size: 2.2rem;
-					line-height: 1.5;
 					z-index: 2;
 				}
 
@@ -123,15 +145,20 @@
 
 		.tab-content {
 			.tab-pane {
-				display: flex;
+				display: none;
 				justify-content: space-between;
+				animation: fadeEffect 0.6s ease;
+
+				&.active {
+					display: flex;
+				}
 
 				.img-wrapper {
 					width: 59.2rem;
 					height: 39.2rem;
 					background: #3EC6FF;
-					border-radius: 16px;
-					margin-right: 2rem;
+					border-radius: $XS;
+					margin-right: $S;
 
 					img {
 						width: 100%;
@@ -139,51 +166,42 @@
 					}
 				}
 
-				.text-wrapper {
-					h5 {
-						color: $blue;
-						padding-bottom: 3.2rem;
-						margin-bottom: 2.4rem;
-						position: relative;
+				h5 {
+					color: $blue;
+					padding-bottom: $M;
+					margin-bottom: $S;
+					position: relative;
 
-						&:before {
-							content: '';
-							position: absolute;
-							bottom: 0;
-							left: 0;
-							right: 0;
-							height: 1px;
-							background-color: $blue;
-						}
+					&:before {
+						content: '';
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						right: 0;
+						height: 1px;
+						background-color: $blue;
+					}
+				}
+
+				li {
+					margin-bottom: $XS;
+					padding-left: calc($XS + $XS2);
+					position: relative;
+
+					&:last-of-type {
+						margin-bottom: 0;
 					}
 
-					.list {
-						.list-item {
-							font-weight: 300;
-							font-size: 2.4rem;
-							line-height: 1.5;
-							letter-spacing: 0.01em;
-							color: $dark;
-							margin-bottom: 1.6rem;
-							padding-left: calc(1.6rem + .8rem);
-							position: relative;
-
-							&:last-of-type {
-								margin-bottom: 0;
-							}
-
-							&::before {
-								content: '';
-								position: absolute;
-								top: 50%;
-								left: 0;
-								transform: translateY(-50%);
-								background-color: $bright-blue;
-								width: .8rem;
-								height: .8rem;
-								border-radius: 50%;
-							}
-						}
+					&::before {
+						content: '';
+						position: absolute;
+						top: 50%;
+						left: 0;
+						transform: translateY(-50%);
+						background-color: $bright-blue;
+						width: .8rem;
+						height: .8rem;
+						border-radius: 50%;
 					}
 				}
 			}
@@ -191,19 +209,30 @@
 	}
 }
 
-@include respond(xl-screen) {
+@include respond(m-screen) {
 	.solution {
+		padding: $XL2 0 $XL2;
+
+		.container {
+			&:before {
+				content: none;
+			}
+		}
+
+		.section-title {
+			margin-bottom: $L;
+		}
+
 		.solution-tabs {
 			.nav-tabs {
-				display: grid;
-				grid-template-rows: 1fr 1fr;
-				grid-template-columns: 1fr 1fr;
-				margin: 0 0 12rem 0;
+				flex-wrap: wrap;
+				margin: 0;
+				justify-content: center;
+				margin-bottom: $M ;
 
 				.nav-link {
-					margin: 0 auto;
-					margin-bottom: 1.5rem;
-					max-width: 29rem;
+					max-width: unset;
+					width: calc(50% - $M);
 
 					&:before {
 						content: none;
@@ -214,24 +243,9 @@
 					}
 				}
 			}
-		}
-	}
-}
-
-@include respond(m-screen) {
-	.solution {
-		.section-title {
-			margin-bottom: 5.5rem;
-		}
-
-		.solution-tabs {
-			.nav-tabs {
-				margin-bottom: 6.4rem;
-			}
 
 			.tab-content {
 				.tab-pane {
-					display: flex;
 					flex-direction: column;
 					width: 100%;
 					max-width: 59.2rem;
@@ -239,7 +253,8 @@
 
 					.img-wrapper {
 						width: 100%;
-						margin-bottom: 3.2rem;
+						margin-bottom: $M;
+						margin-right: 0;
 					}
 				}
 			}
@@ -247,22 +262,21 @@
 	}
 }
 
-@include respond(m-screen) {
+@include respond(s-screen) {
 	.solution {
+		padding: $XL 0 $XL;
+
 		.section-title {
-			margin-bottom: 5.5rem;
+			margin-bottom: $L;
 		}
 
 		.solution-tabs {
 			.nav-tabs {
-				grid-template-rows: 1fr;
-				grid-template-columns: 1fr;
-				margin-bottom: 5.6rem;
+				margin-bottom: $XS;
 
 				.nav-link {
-					margin-bottom: 1.5rem;
-					max-width: 30rem;
-					padding: 1.6rem 3rem;
+					width: 100%;
+					margin: 0 0 $XS;
 				}
 			}
 
@@ -270,8 +284,16 @@
 				.tab-pane {
 					.img-wrapper {
 						width: 100%;
-						margin-bottom: 5.6rem;
+						margin-bottom: $L;
 						height: 31.2rem;
+					}
+
+					h5 {
+						padding-bottom: $S;
+					}
+
+					li {
+						margin-bottom: $XS2;
 					}
 				}
 			}

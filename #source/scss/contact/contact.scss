@@ -1,35 +1,284 @@
 .contact {
 	background: linear-gradient(87.95deg, #0071BC 0%, #00C0F3 100%);
-	padding: 17.6rem 0 16rem;
+	height: calc(100vh - 9.8rem - 30.9rem);
+	min-height: 70rem;
 
 	.container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.parts-wrapper {
+		width: 100%;
 		display: flex;
 	}
 
 	.contact-part {
+
 		&:nth-of-type(1) {
 			width: 60%;
-			padding-right: 4.8rem;
+			padding-right: $L;
 			border-right: 1px solid $white;
 		}
 
 		&:nth-of-type(2) {
 			width: 40%;
-			padding-left: 5.6rem;
+			padding-left: $L;
+			display: flex;
+			flex-direction: column;
 		}
 
-		h4 {
-			margin-bottom: 4.8rem;
+		h5 {
+			margin-bottom: $L;
 		}
+
 
 		.group-wrapper {
 			display: flex;
 			justify-content: space-between;
+
+			.group {
+				width: 48%;
+			}
+		}
+
+		.group.control {
+			margin-bottom: $M;
 		}
 
 		.group.textarea {
+			margin-bottom: $XS;
+
 			textarea {
 				height: 15rem;
+			}
+		}
+
+		.group.check {
+			// max-width: 29rem;
+			margin-bottom: 0;
+		}
+
+		.group.file-transparent {
+			margin-bottom: $S;
+		}
+
+		.part-wrapper {
+			display: flex;
+
+			.side-part {
+				display: flex;
+				flex-direction: column;
+
+				&:nth-of-type(1) {
+					width: 60%;
+				}
+
+				&:nth-of-type(2) {
+					width: 40%;
+					justify-content: flex-end;
+					align-items: flex-end;
+				}
+			}
+		}
+
+
+		.contact-info {
+			display: flex;
+			flex-direction: column;
+
+			.link-wrapper {
+				&:nth-of-type(1) {
+					display: flex;
+					flex-direction: column;
+
+					.link-group {
+						display: flex;
+						align-items: center;
+						margin-bottom: $XS;
+
+						span {
+							font-size: inherit;
+						}
+
+						img {
+							margin-right: $XS2;
+						}
+					}
+				}
+
+				&:nth-of-type(2) {
+					display: flex;
+
+					a {
+						&:first-of-type {
+							margin: 0 $XS2 0 0;
+						}
+
+						&:last-of-type {
+							margin: 0 0 0 $XS2;
+						}
+					}
+				}
+			}
+		}
+
+		.follow-info {
+			margin-top: auto;
+			display: flex;
+			flex-direction: column;
+			margin-bottom: $S;
+
+			h5 {
+				margin-bottom: $M;
+			}
+
+			.link-wrapper {
+				display: flex;
+				align-items: center;
+
+				a {
+					margin: 0 $XS2;
+
+					&:first-of-type {
+						margin: 0 $XS2 0 0;
+					}
+
+					&:last-of-type {
+						margin: 0 0 0 $XS2;
+					}
+				}
+			}
+		}
+	}
+}
+
+@include respond(m-screen) {
+	.contact {
+		padding: $XL 0 $XL2;
+		height: auto;
+		min-height: unset;
+
+		.parts-wrapper {
+			flex-direction: column;
+		}
+
+		.contact-part {
+			&:nth-of-type(1) {
+				width: 100%;
+				padding-bottom: 4.8rem;
+				padding-right: 0;
+				border-right: none;
+				border-bottom: 1px solid $white;
+			}
+
+			&:nth-of-type(2) {
+				width: 100%;
+				padding-left: 0;
+				padding-top: 4rem;
+				flex-direction: row;
+				justify-content: space-between;
+			}
+
+			.contact-info {
+				margin-right: 1rem;
+			}
+
+			.follow-info {
+				margin-top: 0;
+				margin-left: 1rem;
+			}
+		}
+	}
+}
+
+@include respond(s-screen) {
+	.contact {
+		padding: 8.8rem 0 8rem;
+
+		.container {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.contact-part {
+			&:nth-of-type(1) {
+				width: 100%;
+				padding-bottom: 4.8rem;
+				padding-right: 0;
+				border-right: none;
+				border-bottom: 1px solid $white;
+			}
+
+			&:nth-of-type(2) {
+				flex-direction: column;
+			}
+
+			h4 {
+				font-size: 3rem;
+				margin-bottom: 4rem;
+			}
+
+			form {
+				.group-wrapper {
+					flex-direction: column;
+
+					.group {
+						width: 100%;
+						margin-bottom: 1.6rem;
+					}
+				}
+
+				.part-wrapper {
+					flex-direction: column;
+					justify-content: center;
+
+					.side-part {
+						width: 100%;
+
+						&:nth-of-type(2) {
+							align-items: center;
+						}
+
+						.btn.step {
+							margin-top: 4rem;
+						}
+					}
+				}
+			}
+
+			.contact-info {
+				margin-right: 0;
+				text-align: center;
+
+				.link-wrapper {
+					justify-content: center;
+
+					&:nth-of-type(1) {
+						.link-group {
+							justify-content: flex-start;
+							max-width: 25rem;
+							width: 100%;
+							margin: 0 auto;
+							margin-bottom: 2rem;
+						}
+					}
+
+					.link-group {
+						justify-content: center;
+					}
+				}
+			}
+
+			.follow-info {
+				margin-top: 5rem;
+				margin-left: 0;
+				text-align: center;
+
+				.link-wrapper {
+					justify-content: center;
+				}
 			}
 		}
 	}

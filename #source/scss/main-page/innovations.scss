@@ -1,10 +1,21 @@
 .innovations {
 	background-color: $dark-blue;
-	padding: 9.6rem 0;
+	padding: $XL2 0;
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: url(/img/innovations-bg.png) center/contain repeat;
+	}
 
 	h3 {
 		text-align: center;
-		margin-bottom: 5.6rem;
+		margin-bottom: $L;
 	}
 
 	.row-item {
@@ -13,26 +24,21 @@
 		width: 100%;
 		max-width: 48.8rem;
 		background: $dark;
-		border-radius: 2.4rem;
-		padding: 2.4rem 2rem;
+		border-radius: $S;
+		padding: $S;
+		margin-bottom: $M;
 		text-align: center;
-		margin-bottom: 3.2rem;
 		position: relative;
-
-		// span {
-		// 	font-size: 20px;
-		// 	line-height: 150%;
-		// 	position: absolute;
-		// 	top: .8rem;
-		// 	left: 2rem;
-		// }
 	}
 
 	.row {
+		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
 	}
 
 	.col-12 {
+		width: 100%;
 		display: flex;
 
 		&:nth-of-type(even) {
@@ -84,7 +90,7 @@
 
 			.row-item {
 				margin: 0 auto;
-				margin-bottom: 3.2rem;
+				margin-bottom: $M;
 			}
 		}
 	}
@@ -92,11 +98,19 @@
 
 @include respond(s-screen) {
 	.innovations {
-		padding: 8rem 0;
-
 		.row-item {
 			margin: 0 auto;
-			margin-bottom: 3.2rem;
+			margin-bottom: $M;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.innovations {
+		padding: $XL 0;
+
+		.col-lg-6 {
+			width: 50%;
 		}
 	}
 }

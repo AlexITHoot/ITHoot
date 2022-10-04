@@ -5,17 +5,14 @@
 	justify-content: center;
 	border: none;
 	outline: none;
+	box-shadow: unset;
 
 	width: 100%;
 	font-weight: 600;
-	line-height: 1.3;
-	color: $white;
-	padding: 1.45rem 2.5rem;
-	border-radius: 3.2rem;
-	position: relative;
+	line-height: 1;
+
 	z-index: 1;
-	outline: none;
-	box-shadow: unset;
+	position: relative;
 
 	&:after {
 		content: '';
@@ -24,8 +21,7 @@
 		right: 0;
 		bottom: 0;
 		left: 0;
-		border-radius: 3.2rem;
-		transition: opacity .6s;
+		transition: all .6s ease;
 		opacity: 0;
 		z-index: -1;
 	}
@@ -41,10 +37,48 @@
 		}
 	}
 
-	&.main {
-		font-size: 1.8rem;
-		max-width: 30rem;
-		background: linear-gradient(87.95deg, #0071BC 0%, #00C0F3 100%);
+	&.primary {
+		border-radius: $XS;
+		padding: 1.5rem 1.75rem;
+		background: linear-gradient(87.95deg, #6AEA06 0%, #00C0F3 100%);
+
+		&.big {
+			max-width: 32rem;
+			font-size: 2.6rem;
+			color: $dark;
+
+			&:hover {
+				color: $dark;
+			}
+
+			&:active,
+			&:focus {
+				color: $white;
+
+				&:after {
+					background: $dark;
+				}
+			}
+		}
+
+		&.small {
+			max-width: 17.6rem;
+			font-size: 2rem;
+			color: $white;
+
+			&:hover {
+				color: $white;
+			}
+
+			&:active,
+			&:focus {
+				color: $white;
+			}
+		}
+
+		&:after {
+			border-radius: $XS;
+		}
 
 		&:hover {
 			&:after {
@@ -54,80 +88,120 @@
 
 		&:active,
 		&:focus {
+			background: linear-gradient(267.95deg, #0071BC 0%, #00C0F3 100%);
+
 			&:after {
 				background: $dark;
 			}
 		}
 	}
 
-	&.step {
-		font-size: 2.6rem;
+	&.secondary {
 		max-width: 30rem;
-		background: #121616;
-
-		&:hover {
-			background: linear-gradient(87.95deg, #0071BC 0%, #00C0F3 100%);
-		}
-
-		&:active,
-		&:focus {
-			background: linear-gradient(87.95deg, #0071BC 0%, #00C0F3 100%);
-		}
-	}
-
-	&.steps {
 		font-size: 2.2rem;
-		padding: 2.4rem 2.5rem;
-		max-width: 30rem;
-		background: #0B273A;
-
-		&:hover {
-			box-shadow: 0px 8px 12px rgba(11, 39, 58, 0.25);
-		}
-
-		&:active,
-		&:focus {
-			background: linear-gradient(87.95deg, #0071BC 0%, #00C0F3 100%);
-		}
-	}
-
-	&.small {
-		font-size: 2rem;
-		padding: 1.45rem 2.5rem;
-		max-width: 17.6rem;
-		background: linear-gradient(87.95deg, #6AEA06 0%, #00C0F3 100%);
-
-		&:hover {
-			background: linear-gradient(267.95deg, #0071BC 0%, #00C0F3 100%);
-		}
-
-		&:active,
-		&:focus {
-			background: $dark;
-		}
-	}
-
-	&.contact {
-		font-weight: 900;
-		font-size: 2.6rem;
-		line-height: 1;
-		padding: 1.3rem 2.5rem 1.7rem;
-		max-width: 32rem;
-		color: $dark;
-		background: linear-gradient(87.95deg, #6AEA06 0%, #00C0F3 100%);
+		background: linear-gradient(87.95deg, #0071BC 0%, #00C0F3 100%);
+		border-radius: $XS;
+		color: $white;
+		padding: 1.7rem 1.75rem;
 
 		&:after {
-			background: linear-gradient(267.95deg, #0071BC 0%, #00C0F3 100%);
+			border-radius: $XS;
+		}
+
+		&:hover {
+			color: $white;
+
+			&:after {
+				background: linear-gradient(267.95deg, #0071BC 0%, #00C0F3 100%);
+			}
 		}
 
 		&:active,
 		&:focus {
 			color: $white;
+			background: linear-gradient(267.95deg, #0071BC 0%, #00C0F3 100%);
 
 			&:after {
 				background: $dark;
-				box-shadow: 0px 8px 12px rgba(11, 39, 58, 0.25);
 			}
 		}
+	}
+
+	&.bordered {
+		border: 2px solid $white;
+		border-radius: $S;
+		padding: ($XS - .3rem) $XS $XS;
+		color: $white;
+		font-size: 1.6rem;
+		font-weight: 300;
+		max-width: 12rem;
+	}
+
+	&.disable {
+		background: #F6F6F6;
+		color: #828282;
+
+		&:hover,
+		&:active,
+		&:focus {
+			background: #F6F6F6;
+			color: #828282;
+		}
+	}
+
+	&.services {
+		max-width: 20rem;
+		font-size: 2rem;
+		color: $white;
+		border-radius: $XS;
+		background: $dark-blue;
+		line-height: 1;
+		flex-direction: row-reverse;
+		transition: all .3s linear;
+		padding: 1.5rem 1.75rem;
+		overflow: hidden;
+
+		&:after {
+			background: linear-gradient(87.95deg, #0071BC 0%, #00C0F3 100%);
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: 1rem;
+			width: 2rem;
+			height: 2rem;
+			background: url(/img/icons/services-arrow.svg) center/cover no-repeat;
+			margin-left: auto;
+			display: none;
+			animation: fadeBtn .3s;
+			animation-fill-mode: forwards;
+			animation-timing-function: linear;
+		}
+
+		&:hover,
+		&:active,
+		&:focus {
+			background: rgba($dark-blue, 0);
+
+			&:before {
+				display: inline-block;
+			}
+		}
+	}
+}
+
+@keyframes fadeBtn {
+	from {
+		opacity: 0;
+		background-size: 0% 0%;
+		transform: translateY(-50%) translateX(-25px);
+	}
+
+	to {
+		opacity: 1;
+		background-size: 100% 100%;
+		transform: translateY(-50%) translateX(0px);
 	}
 }

@@ -1,7 +1,7 @@
 .careers {
 	.title-block {
 		background: url(/img/careers-prew.png)no-repeat center/cover;
-		padding: 12.8rem 0 21.8rem;
+		padding: $XL3 0 $XL4;
 		position: relative;
 
 		&:before {
@@ -18,36 +18,36 @@
 		.container {
 			display: flex;
 			flex-direction: column;
+		}
 
-			p,
-			h2 {
-				z-index: 2;
-			}
+		p,
+		h2 {
+			z-index: 2;
+		}
 
-			.body.small {
-				color: $dark;
-				margin-bottom: 5.6rem;
-				font-weight: 900;
-			}
+		.body.small {
+			color: $dark;
+			margin-bottom: $L;
+			font-weight: 900;
+		}
 
-			h2 {
-				background: linear-gradient(87.95deg, #0071BC 0%, #00C0F3 100%);
-				-webkit-background-clip: text;
-				-webkit-text-fill-color: transparent;
-				background-clip: text;
-				text-fill-color: transparent;
-				margin-bottom: 1.6rem;
-			}
+		h2 {
+			background: linear-gradient(87.95deg, #0071BC 0%, #00C0F3 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
+			margin-bottom: $XS;
+		}
 
-			.body.med {
-				color: $dark;
-				max-width: 83rem;
-			}
+		.body.med {
+			color: $dark;
+			max-width: 83rem;
 		}
 	}
 
 	.content-block {
-		padding: 12rem 0;
+		padding: $XL3 0;
 
 		h3 {
 			color: $dark;
@@ -57,12 +57,12 @@
 
 		.item-row {
 			display: flex;
-			margin-bottom: 12.8rem;
-			position: relative;
 			justify-content: space-between;
+			margin-bottom: $XL3;
+			position: relative;
 
 			>div {
-				width: calc(50% - 1.6rem);
+				width: calc(50% - $XS);
 				display: flex;
 				justify-content: space-between;
 			}
@@ -80,11 +80,11 @@
 			}
 
 			.item {
-				width: calc(50% - 1.6rem);
+				width: calc(50% - $XS);
 				background: #F7F6FA;
-				box-shadow: 0px .4rem 1rem rgba(140, 155, 185, 0.14), 0px 1rem 1rem rgba(140, 155, 185, 0.12), 0px .2rem 1rem rgba(140, 155, 185, 0.2);
+				box-shadow: 0px 4px 10px rgba(140, 155, 185, 0.14), 0px 10px 10px rgba(140, 155, 185, 0.12), 0px 2px 10px rgba(140, 155, 185, 0.2);
 				border-radius: .8rem;
-				padding: 3.2rem 1.6rem;
+				padding: $M $XS;
 				min-height: 20rem;
 				position: relative;
 
@@ -97,16 +97,19 @@
 					position: absolute;
 					bottom: 0;
 					left: 50%;
-					width: 1.6rem;
-					height: 1.6rem;
+					width: 1.7rem;
+					height: 1.7rem;
 					transform: translate(-50%, -50%);
 					transition: all .3s ease;
 					z-index: 2;
+					padding: .1rem;
 
 					&:before {
-						content: url(/img/icons/pip.svg);
+						content: '';
+						display: block;
 						width: inherit;
 						height: inherit;
+						background: url(/img/icons/pip.svg) center/contain no-repeat;
 					}
 				}
 			}
@@ -117,26 +120,26 @@
 @include respond(m-screen) {
 	.careers {
 		.title-block {
-			padding: 12.8rem 0 12.8rem;
+			padding: $XL3 0 $XL3;
 
 			.container {
 				.body.small {
-					margin-bottom: 3.2rem;
+					margin-bottom: $M;
 				}
 
 				h2 {
-					margin-bottom: 2.4rem;
+					margin-bottom: $S;
 				}
 			}
 		}
 
 		.content-block {
-			padding: 10.4rem 0;
+			padding: $XL2 0;
 
 			.item-row {
 				flex-wrap: wrap;
 				flex-direction: column;
-				margin-bottom: 12.8rem;
+				margin-bottom: $XL3;
 
 				>div {
 					width: 100%;
@@ -171,25 +174,25 @@
 @include respond(s-screen) {
 	.careers {
 		.title-block {
-			padding: 12.8rem 0 12.8rem;
+			padding: $XL 0 $XL2;
 
 			.container {
 				.body.small {
-					margin-bottom: 3.2rem;
+					margin-bottom: $M;
 				}
 
 				h2 {
-					margin-bottom: 2.4rem;
+					margin-bottom: $S;
 				}
 			}
 		}
 
 		.content-block {
-			padding: 7.2rem 0 8rem;
+			padding: $XL 0 $XL;
 
 			.item-row {
 				flex-wrap: wrap;
-				margin-bottom: 7.2rem;
+				margin-bottom: $XL;
 
 				>div {
 					flex-direction: column;
@@ -201,7 +204,7 @@
 
 				.item {
 					width: 100%;
-					margin-bottom: 2.4rem;
+					margin-bottom: $S;
 					min-height: 13.6rem;
 
 					.pip {

@@ -1,13 +1,26 @@
 .footer {
 	width: 100%;
 	background: $white;
+	position: relative;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		background: linear-gradient(180deg, #DBDBDB 0%, #FEFFFF 6.87%);
+	}
 
 	.wrapper {
 		position: relative;
-		padding: 4.8rem 0;
+		padding: $L 0;
 		background: url(/img/footer/ITHoot_Logo_footer.png)no-repeat center bottom;
+		display: flex;
 
-		.col-12 {
+		.col {
+			width: 50%;
 			display: flex;
 			flex-direction: column;
 
@@ -22,17 +35,21 @@
 		}
 
 		.logo-wrapper {
-			margin-bottom: 5rem;
+			margin-bottom: $L;
 		}
 
 		.location {
 			.location-group {
 				display: flex;
 				align-items: center;
-				margin-bottom: .5rem;
+				margin-bottom: $XS2;
 
 				img {
-					margin-right: 1rem;
+					margin-right: $XS2;
+				}
+
+				a {
+					color: $dark;
 				}
 			}
 		}
@@ -40,23 +57,26 @@
 		.social {
 			display: flex;
 			align-items: center;
-			margin: 0 -1.6rem;
-			margin-bottom: 2.4rem;
+			margin: 0 (-$XS2);
+			margin-bottom: $S;
 
-			>div {
-				margin: 0 .8rem;
+			>a {
+				margin: 0 $XS2;
 			}
 		}
 
 		.rules {
-			p {
-				font-size: 1.4rem;
-				line-height: 1.5;
-				color: $dark;
+			display: flex;
+			align-items: center;
 
-				span {
-					color: $bright-blue;
-				}
+			span {
+				color: $bright-blue;
+				line-height: inherit;
+				margin-right: $XS2;
+			}
+
+			p {
+				color: $dark;
 			}
 		}
 	}
@@ -67,24 +87,23 @@
 		.wrapper {
 			flex-direction: column;
 			background: none;
+			padding: $M 0;
 
-			.col-12 {
-				align-items: center !important;
+			.col {
+				width: 100%;
 
 				&:nth-of-type(1) {
-					margin-bottom: 11rem;
+					margin-bottom: $XL2;
+					align-items: center;
+				}
+
+				&:nth-of-type(2) {
+					align-items: center;
 				}
 			}
 
 			.logo-wrapper {
-				margin-bottom: 4rem;
-			}
-
-			.rules {
-				p {
-					font-size: 1.2rem;
-					line-height: 1.5;
-				}
+				margin-bottom: $M;
 			}
 		}
 	}
