@@ -1,9 +1,8 @@
-.services-veb {
+.web-dev {
 	padding: $XL 0 0;
 
 	.preview {
-		height: calc(100vh - 7rem - 9.8rem);
-		min-height: 45rem;
+		height: 60rem;
 		position: relative;
 		margin-bottom: $XL3;
 
@@ -24,35 +23,27 @@
 		img {
 			position: absolute;
 			transform: translateX(-50%);
+			bottom: 0;
+			height: 100%;
+			width: 100%;
 
 			&.iPad {
-				bottom: 0;
 				left: 25%;
 				z-index: 2;
-				height: 22vw;
-				width: 22vw;
 				max-width: 27.4rem;
 				max-height: 25.4rem;
-				min-width: 14rem;
-				min-height: 16rem;
 			}
 
 			&.iMac {
-				bottom: 0;
 				left: 50%;
 				z-index: 1;
-				height: 36vw;
-				width: 40vw;
 				max-width: 48rem;
 				max-height: 44rem;
 			}
 
 			&.macBook {
-				bottom: 0;
 				left: 75%;
 				z-index: 2;
-				height: 23vw;
-				width: 40vw;
 				max-width: 45.9rem;
 				max-height: 28rem;
 			}
@@ -77,77 +68,6 @@
 
 		>* {
 			width: 49%;
-		}
-	}
-
-	.recipe {
-		margin-bottom: $XL3;
-
-		h4 {
-			margin-bottom: $L;
-		}
-
-		.group-column {
-			display: flex;
-			flex-direction: column;
-			position: relative;
-
-			&:before {
-				content: '';
-				position: absolute;
-				top: 4.5rem;
-				right: 2.3rem;
-				width: .2rem;
-				background: $blue;
-				animation: animateLineHeight 1s linear;
-				animation-fill-mode: forwards;
-				z-index: 2;
-			}
-
-			.item {
-				width: 100%;
-				margin-bottom: $M;
-				background: $bright-blue;
-				border-radius: $XS;
-				padding: $S $XL;
-				position: relative;
-
-				span {
-					position: absolute;
-					top: -40%;
-					left: 1.5rem;
-					line-height: 1;
-					font-weight: 900;
-					font-size: 15.4rem;
-					color: rgb(254 254 254 / 15%);
-				}
-
-				&:last-of-type {
-					margin-bottom: 0;
-				}
-
-				.pip {
-					position: absolute;
-					top: 50%;
-					right: 1.6rem;
-					width: 1.6rem;
-					height: 1.6rem;
-					transform: translateY(-50%);
-					transition: all .3s ease;
-					z-index: 2;
-
-					&:before {
-						content: url(/img/icons/pip-white-blue.svg);
-						width: inherit;
-						height: inherit;
-					}
-
-					&.left {
-						left: 1.6rem;
-						right: auto;
-					}
-				}
-			}
 		}
 	}
 
@@ -194,12 +114,69 @@
 	}
 }
 
-@keyframes animateLineHeight {
-	0% {
-		height: 0%;
-	}
+@include respond(m-screen) {
+	.web-dev {
+		.preview {
+			height: 42rem;
+			margin-bottom: $XL2;
 
-	100% {
-		height: calc(100% - 9rem);
+			h1 {
+				font-size: 7.2rem;
+				max-width: 40rem;
+			}
+
+			img {
+				&.iPad {
+					left: 30%;
+					max-width: 22rem;
+					max-height: 18rem;
+				}
+
+				&.iMac {
+					max-width: 33.6rem;
+					max-height: 32.1rem;
+				}
+
+				&.macBook {
+					left: 65%;
+					max-width: 28rem;
+					max-height: 16.8rem;
+				}
+			}
+		}
+
+		.block-group {
+			justify-content: center;
+			margin-bottom: $XL3;
+			flex-wrap: wrap;
+
+			h4 {
+				text-align: center;
+				margin-bottom: $S;
+			}
+
+			>* {
+				width: 100%;
+			}
+		}
+	}
+}
+
+@include respond(s-screen) {
+	.web-dev {
+		.preview {
+			height: auto;
+			margin-bottom: $XL3;
+
+			h1 {
+				font-size: 6.4rem;
+				max-width: unset;
+				text-align: center;
+			}
+
+			img {
+				display: none;
+			}
+		}
 	}
 }

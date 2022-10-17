@@ -14,9 +14,10 @@
 	}
 
 	.wrapper {
+		width: 100%;
 		position: relative;
 		padding: $L 0;
-		background: url(/img/footer/ITHoot_Logo_footer.png)no-repeat center bottom;
+		background: url(/assets/images/footer/ITHoot_Logo_footer.png)no-repeat center bottom;
 		display: flex;
 
 		.col {

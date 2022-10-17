@@ -1,7 +1,8 @@
 .innovations {
 	background-color: $dark-blue;
-	padding: $XL2 0;
+	height: 100vh;
 	position: relative;
+	min-height: 65rem;
 
 	&::before {
 		content: '';
@@ -10,7 +11,7 @@
 		bottom: 0;
 		left: 0;
 		right: 0;
-		background: url(/img/innovations-bg.png) center/contain repeat;
+		background: url(/assets/images/innovations-bg.png) center/contain repeat;
 	}
 
 	h3 {
@@ -85,6 +86,9 @@
 
 @include respond(m-screen) {
 	.innovations {
+		height: auto;
+		padding: $XL 0 $L;
+
 		.col-12 {
 			max-width: 100% !important;
 
@@ -107,8 +111,6 @@
 
 @media (min-width: 992px) {
 	.innovations {
-		padding: $XL 0;
-
 		.col-lg-6 {
 			width: 50%;
 		}

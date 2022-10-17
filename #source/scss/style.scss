@@ -35,6 +35,11 @@ body {
 
 // Main grid
 .container {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+
 	max-width: 125rem;
 	margin: 0 auto;
 	height: 100%;
@@ -70,12 +75,17 @@ body {
 @import "main-scss/form.scss";
 @import "main-scss/global.scss";
 
+@import "main-scss/modules/card.scss";
+@import "main-scss/modules/choose.scss";
+@import "main-scss/modules/contact-block.scss";
+@import "main-scss/modules/recipe.scss";
+@import "main-scss/modules/tech-stack.scss";
+
 @import "main-page/prew-page.scss";
 @import "main-page/statistics.scss";
 @import "main-page/innovations.scss";
 @import "main-page/solution.scss";
 @import "main-page/insights.scss";
-@import "main-page/contact-block.scss";
 
 @import "projects/projects.scss";
 
@@ -90,6 +100,8 @@ body {
 
 @import "thanks/thanks.scss";
 
-@import "services-web/services-web.scss";
+@import "web-dev/web-dev.scss";
 
 @import "mob-dev/mob-dev.scss";
+
+@import "staff/staff.scss";

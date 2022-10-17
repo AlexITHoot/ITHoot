@@ -1,46 +1,240 @@
-.swiper-pointer-events {
-	touch-action: pan-y;
+.slider-view {
+	padding: calc($XL3 - 5rem) 0 $XL3;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+
+	.swiper {
+		width: 100%;
+		max-width: 260rem;
+		padding: $L 0;
+
+		.swiper-slide {
+			background-position: center;
+			background-size: cover;
+			width: 100%;
+			max-width: 100rem;
+			height: 75rem;
+			transition: all .3s ease;
+			position: relative;
+			display: flex;
+			align-items: flex-start;
+			justify-content: flex-end;
+			flex-direction: column;
+			padding: $XL;
+
+			img {
+				position: absolute;
+				display: block;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+
+			h4 {
+				color: $white;
+				z-index: 1;
+				margin-bottom: $XS;
+				opacity: 0;
+			}
+
+			p {
+				color: $white;
+				max-width: 25rem;
+				z-index: 1;
+				opacity: 0;
+			}
+
+			&.swiper-slide-active {
+				margin: 0 .5rem;
+				height: 51.8rem;
+				margin-top: 11.6rem;
+				width: 99%;
+
+				h4,
+				p {
+					animation-name: fadeSwiper;
+					animation-duration: .6s;
+					animation-fill-mode: forwards;
+				}
+			}
+		}
+
+		.swiper-button-wrapper {
+			width: 100rem;
+			margin: 0 auto;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%);
+			z-index: 2;
+		}
+
+		.swiper-button-next,
+		.swiper-button-prev {
+			width: 3.2rem;
+			height: 3.2rem;
+
+			img {
+				width: 100%;
+				height: 100%;
+			}
+
+			&::after {
+				content: none;
+			}
+		}
+
+		.swiper-button-next {
+			right: 5%;
+		}
+
+		.swiper-button-prev {
+			left: 5%;
+		}
+	}
+
+	.btn {
+		margin: 0 auto;
+		margin-top: (-$XL);
+	}
 }
 
-.swiper-pointer-events.swiper-vertical {
-	touch-action: pan-x;
+@keyframes fadeSwiper {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
 }
 
-.swiper-slide {
-	flex-shrink: 0;
-	height: 100%;
-	position: relative;
-	transition-property: transform;
-	background-position: center;
-	background-size: cover;
-	width: 100%;
+@include respond(m-screen) {
+	.slider-view {
+		height: 85vh;
+		min-height: 55rem;
+		padding: 0;
+
+		.swiper {
+			padding: $M 0;
+
+			.swiper-slide {
+				max-width: 52rem;
+				height: 40rem;
+				padding: $M;
+
+				h4 {
+					margin-bottom: $XS;
+				}
+
+				&.swiper-slide-active {
+					height: 33rem;
+					margin: 0;
+					margin-top: 3.5rem;
+				}
+			}
+
+			.swiper-button-wrapper {
+				display: none;
+			}
+		}
+
+		.btn {
+			margin: 0 auto;
+			margin-top: (-$S);
+			margin-bottom: $S;
+		}
+	}
 }
 
-.swiper-panorama {
-	overflow: visible;
+@include respond(s-screen) {
+	.slider-view {
+		height: 75vh;
+		min-height: 60rem;
+
+		.swiper {
+			padding: $M 0;
+
+			.swiper-slide {
+				max-width: 100%;
+				height: 40rem;
+				padding: $M;
+
+				h4 {
+					margin-bottom: $XS;
+				}
+
+				&.swiper-slide-active {
+					height: 40rem;
+					margin: 0;
+					margin-top: 0;
+				}
+			}
+
+			.swiper-button-wrapper {
+				display: block;
+				width: 100%;
+			}
+
+			.swiper-button-next {
+				right: 2.5%;
+			}
+
+			.swiper-button-prev {
+				left: 2.5%;
+			}
+		}
+
+		.btn {
+			margin: 0 auto;
+		}
+	}
 }
 
-.panorama-slider {
-	padding: 48px 0;
-	width: 100%;
-	position: relative;
-	overflow: hidden;
-}
+@include respond(es-screen) {
+	.slider-view {
+		height: 55vh;
+		min-height: 40rem;
 
-.panorama-slider .swiper {
-	width: 100%;
-	height: 50rem;
-}
+		.swiper {
+			.swiper-slide {
+				height: 22.4rem;
+				padding: $S $M;
 
-.panorama-slider .slide-image {
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	pointer-events: none;
-}
+				h4 {
+					margin-bottom: 0;
+				}
 
-.panorama-slider .swiper-pagination {
-	bottom: -10px;
-	--swiper-pagination-bullet-inactive-color: #fff;
-	--swiper-pagination-color: #fff;
+				p {
+					max-width: 100%;
+				}
+
+				&.swiper-slide-active {
+					height: 22.4rem;
+					margin: 0;
+					margin-top: 0;
+				}
+			}
+
+			.swiper-button-wrapper {
+				display: block;
+				width: 100%;
+			}
+
+			.swiper-button-next {
+				right: 0;
+			}
+
+			.swiper-button-prev {
+				left: 0;
+			}
+		}
+
+		.btn {
+			margin: 0 auto;
+		}
+	}
 }

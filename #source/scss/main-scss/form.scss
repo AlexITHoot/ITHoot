@@ -127,7 +127,7 @@
 		}
 
 		.checkbox:checked+.form-label::before {
-			background-image: url(/img/icons/check-white.svg);
+			background-image: url(/assets/images/icons/check-white.svg);
 			background-size: 75% 75%;
 			border: 2px solid $dark;
 			background-color: $dark-blue;

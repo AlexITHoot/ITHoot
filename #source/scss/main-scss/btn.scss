@@ -6,13 +6,11 @@
 	border: none;
 	outline: none;
 	box-shadow: unset;
-
 	width: 100%;
-	font-weight: 600;
 	line-height: 1;
-
 	z-index: 1;
 	position: relative;
+	transition: all .3s ease;
 
 	&:after {
 		content: '';
@@ -41,6 +39,7 @@
 		border-radius: $XS;
 		padding: 1.5rem 1.75rem;
 		background: linear-gradient(87.95deg, #6AEA06 0%, #00C0F3 100%);
+		font-weight: 900;
 
 		&.big {
 			max-width: 32rem;
@@ -102,6 +101,7 @@
 		background: linear-gradient(87.95deg, #0071BC 0%, #00C0F3 100%);
 		border-radius: $XS;
 		color: $white;
+		font-weight: 900;
 		padding: 1.7rem 1.75rem;
 
 		&:after {
@@ -128,13 +128,26 @@
 	}
 
 	&.bordered {
-		border: 2px solid $white;
-		border-radius: $S;
+		border: 3px solid $bright-blue;
+		border-radius: $XS;
 		padding: ($XS - .3rem) $XS $XS;
-		color: $white;
-		font-size: 1.6rem;
-		font-weight: 300;
-		max-width: 12rem;
+		font-size: 2.2rem;
+		font-weight: 900;
+		max-width: 28rem;
+		color: $bright-blue;
+		background: $white;
+
+		&:hover {
+			color: $white;
+			background: $bright-blue;
+		}
+
+		&:active,
+		&:focus {
+			color: $white;
+			background: $blue;
+			border: 3px solid $blue;
+		}
 	}
 
 	&.disable {
@@ -152,6 +165,7 @@
 	&.services {
 		max-width: 20rem;
 		font-size: 2rem;
+		font-weight: 600;
 		color: $white;
 		border-radius: $XS;
 		background: $dark-blue;
@@ -172,7 +186,7 @@
 			right: 1rem;
 			width: 2rem;
 			height: 2rem;
-			background: url(/img/icons/services-arrow.svg) center/cover no-repeat;
+			background: url(/assets/images/icons/services-arrow.svg) center/cover no-repeat;
 			margin-left: auto;
 			display: none;
 			animation: fadeBtn .3s;

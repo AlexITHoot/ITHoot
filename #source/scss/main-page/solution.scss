@@ -1,5 +1,6 @@
 .solution {
-	padding: $XL3 0 $XL2;
+	height: 100vh;
+	min-height: 95rem;
 	overflow: hidden;
 
 	.container {
@@ -15,7 +16,7 @@
 			max-width: 89.6rem;
 			max-height: 47.4rem;
 			height: 100%;
-			background: url(/img/icons/solition-bg.svg) center/contain no-repeat;
+			background: url(/assets/images/icons/solition-bg.svg) center/contain no-repeat;
 			z-index: -1;
 		}
 	}
@@ -96,7 +97,7 @@
 
 					.pip {
 						&:before {
-							content: url(/img/icons/pip-wihite.svg);
+							content: url(/assets/images/icons/pip-wihite.svg);
 						}
 					}
 				}
@@ -130,7 +131,7 @@
 					z-index: 2;
 
 					&:before {
-						content: url(/img/icons/pip.svg);
+						content: url(/assets/images/icons/pip.svg);
 						width: inherit;
 						height: inherit;
 					}
@@ -212,6 +213,7 @@
 @include respond(m-screen) {
 	.solution {
 		padding: $XL2 0 $XL2;
+		height: auto;
 
 		.container {
 			&:before {

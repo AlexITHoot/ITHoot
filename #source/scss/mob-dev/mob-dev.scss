@@ -1,329 +1,325 @@
 .mob-dev {
-    .section-title {
-        padding-top: 9.8rem;
-        width: 100%;
-        height: 52rem;
-        display: flex;
-        justify-content: center;
+	.section-title {
+		padding-top: $XL2;
+		width: 100%;
+		height: 52rem;
+		display: flex;
+		justify-content: center;
 
-        .img-wrapper {
-            margin: 0 -10rem;
-            max-width: 56.7rem;
-            max-height: 51.2rem;
+		.img-wrapper {
+			margin: 0 -10rem;
+			max-width: 56.7rem;
+			max-height: 51.2rem;
 
-            img {
-                width: 100%;
-                height: 100%;
-            }
-        }
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
 
-        .title-group {
-            position: relative;
-            height: fit-content;
+		.title-group {
+			position: relative;
+			height: fit-content;
 
-            >div {
-                max-width: 8.8rem;
-                max-height: 5.6rem;
-                position: absolute;
-                left: 50%;
-                transform: translateX(-50%);
+			>div {
+				max-width: 8.8rem;
+				max-height: 5.6rem;
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
 
-                img {
-                    width: 100%;
-                    height: 100%;
-                }
-            }
+				img {
+					width: 100%;
+					height: 100%;
+				}
+			}
 
-            &:first-of-type {
-                align-self: flex-start;
+			&:first-of-type {
+				align-self: flex-start;
 
-                h2 {
-                    color: #00ADEF;
+				h2 {
+					color: #00ADEF;
 
-                    +div {
-                        bottom: -8rem;
-                    }
-                }
-            }
+					+div {
+						bottom: -8rem;
+					}
+				}
+			}
 
-            &:last-of-type {
-                align-self: flex-end;
+			&:last-of-type {
+				align-self: flex-end;
 
-                h2 {
-                    color: #0071BB;
+				h2 {
+					color: #0071BB;
 
-                    +div {
-                        top: -5rem;
-                    }
-                }
-            }
-        }
-    }
+					+div {
+						top: -5rem;
+					}
+				}
+			}
+		}
+	}
 
-    .block-wrapper {
-        display: flex;
-        justify-content: space-between;
-        padding-top: 12.8rem;
+	.block-wrapper {
+		display: flex;
+		justify-content: space-between;
+		padding-top: $XL3;
 
-        p {
-            color: $dark;
-        }
+		p {
+			color: $dark;
+		}
 
-        >div {
-            &:nth-of-type(1) {
-                width: 50%;
-            }
+		>div {
+			&:nth-of-type(1) {
+				width: 50%;
+			}
 
-            &:nth-of-type(2) {
-                width: 45%;
-            }
-        }
+			&:nth-of-type(2) {
+				width: 45%;
+			}
+		}
 
-        .block-group {
-            display: flex;
-            flex-direction: column;
+		.block-group {
+			display: flex;
+			flex-direction: column;
 
-            .group-item {
-                display: flex;
-                align-items: flex-start;
-                margin-bottom: 1.6rem;
+			.group-item {
+				display: flex;
+				align-items: flex-start;
+				margin-bottom: $XS;
 
-                &:last-of-type {
-                    margin-bottom: 0;
-                }
+				&:last-of-type {
+					margin-bottom: 0;
+				}
 
-                .img-wrapper {
-                    max-width: 5.6rem;
-                    height: 5.6rem;
-                    margin-right: 1.6rem;
+				.img-wrapper {
+					max-width: 5.6rem;
+					height: 5.6rem;
+					margin-right: $XS;
 
-                    img {
-                        width: 100%;
-                        height: 100%;
-                    }
-                }
+					img {
+						width: 100%;
+						height: 100%;
+					}
+				}
 
-                .right-part {
-                    display: flex;
-                    flex-direction: column;
+				.right-part {
+					display: flex;
+					flex-direction: column;
 
-                    p {
-                        margin-bottom: .8rem;
+					p {
+						margin-bottom: $XS2;
 
-                        &.big {
-                            background: linear-gradient(87.95deg, #0071BC 0%, #00C0F3 100%);
-                            -webkit-background-clip: text;
-                            -webkit-text-fill-color: transparent;
-                            background-clip: text;
-                        }
+						&.big {
+							background: linear-gradient(87.95deg, #0071BC 0%, #00C0F3 100%);
+							-webkit-background-clip: text;
+							-webkit-text-fill-color: transparent;
+						}
 
-                        &:last-of-type {
-                            margin-bottom: 0;
-                        }
-                    }
-                }
-            }
-        }
-    }
+						&:last-of-type {
+							margin-bottom: 0;
+						}
+					}
+				}
+			}
+		}
+	}
 
-    .mob-application {
-        padding-top: 12.8rem;
+	.mob-application {
+		padding-top: $XL3;
 
-        h4 {
-            padding-bottom: 7.5rem;
-            color: $dark;
-            text-align: center;
-        }
+		h4 {
+			padding-bottom: $XL;
+			color: $dark;
+			text-align: center;
+		}
 
-        .card-wrapper {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding-bottom: 12.8rem;
+		.card-wrapper {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			padding-bottom: $XL3;
 
-            .application-item {
-                width: calc(33.33% - 3.2rem);
-                background: #F3F6FB;
-                box-shadow: 0px 4px 10px rgba(140, 155, 185, 0.14), 0px 1px 10px rgba(140, 155, 185, 0.12), 0px 2px 10px rgba(140, 155, 185, 0.2);
-                border-radius: 1.6rem;
-                padding: 4rem 3.2rem;
-                margin: 0 1.6rem;
-                margin-bottom: 3.2rem;
-                min-width: 28.8rem;
+			.application-item {
+				width: calc(33.33% - $M);
+				background: #F3F6FB;
+				box-shadow: 0px 4px 10px rgba(140, 155, 185, 0.14), 0px 1px 10px rgba(140, 155, 185, 0.12), 0px 2px 10px rgba(140, 155, 185, 0.2);
+				border-radius: $XS;
+				padding: 4rem $M;
+				margin: 0 $XS;
+				margin-bottom: $M;
+				min-width: 28.8rem;
 
-                .item-top {
-                    margin-bottom: 1.6rem;
-                    display: flex;
-                    align-items: flex-start;
-                    justify-content: space-between;
+				.item-top {
+					margin-bottom: $XS;
+					display: flex;
+					align-items: flex-start;
+					justify-content: space-between;
 
-                    >div:last-of-type {
-                        img {
-                            margin: 0 .8rem;
-                        }
-                    }
-                }
+					>div {
+						&:first-of-type {
+							max-width: 5.6rem;
+							max-height: 5.6rem;
 
-                .item-body {
-                    p {
-                        color: $dark;
-                    }
+							img {
+								width: 100%;
+								height: 100%;
+							}
+						}
 
-                    p.med {
-                        margin-bottom: 3.2rem;
-                        font-weight: 600;
-                    }
-                }
-            }
-        }
-    }
+						&:last-of-type {
+							img {
+								margin: 0 $XS2;
+							}
+						}
+					}
+				}
 
-    .choose {
-        h4 {
-            color: $dark;
-            text-align: center;
-            margin-bottom: 5.6rem;
-        }
+				.item-body {
+					p {
+						color: $dark;
+					}
 
-        .choose-warpper {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-
-            .item {
-                width: calc(33.33% - 3.2rem);
-                min-width: 28.8rem;
-                background: #F3F6FB;
-                box-shadow: 0px 4px 10px rgba(140, 155, 185, 0.14),
-                    0px 1px 10px rgba(140, 155, 185, 0.12),
-                    0px 2px 10px rgba(140, 155, 185, 0.2);
-                border-radius: .8rem;
-                margin: 0 1.6rem;
-                margin-bottom: 3.2rem;
-                background: url(/img/mob-dev/choose-bg.svg) center/cover no-repeat;
-                padding: 2.4rem;
-
-                p {
-                    color: $dark;
-
-                    &.big {
-                        margin-bottom: 1.6rem;
-                    }
-
-                    &.med {
-                        line-height: 150%;
-                    }
-                }
-            }
-        }
-    }
+					p.med {
+						margin-bottom: $M;
+						font-weight: 600;
+					}
+				}
+			}
+		}
+	}
 }
 
 @include respond(m-screen) {
-    .mob-dev {
-        .section-title {
-            height: 40rem;
+	.mob-dev {
+		.section-title {
+			height: 40rem;
 
-            .title-group {
-                >div {
-                    max-width: 6.4rem;
-                    max-height: 4rem;
-                }
-            }
-        }
+			.title-group {
+				>div {
+					max-width: 6.4rem;
+					max-height: 4rem;
+				}
+			}
+		}
 
-        .block-wrapper {
-            flex-direction: column;
+		.block-wrapper {
+			flex-direction: column;
 
-            >div {
-                &:nth-of-type(1) {
-                    width: 100%;
-                    margin-bottom: 3.2rem;
-                }
+			>div {
+				&:nth-of-type(1) {
+					width: 100%;
+					margin-bottom: $M;
+				}
 
-                &:nth-of-type(2) {
-                    width: 100%;
-                }
-            }
+				&:nth-of-type(2) {
+					width: 100%;
+				}
+			}
 
-            .block-group {
-                flex-direction: row;
-                flex-wrap: wrap;
+			.block-group {
+				flex-direction: row;
+				flex-wrap: wrap;
 
-                .group-item {
-                    width: 50%;
-                }
-            }
-        }
-    }
+				.group-item {
+					width: 50%;
+				}
+			}
+		}
+
+		.mob-application {
+			.card-wrapper {
+				padding-bottom: $XL2;
+			}
+		}
+	}
 }
 
 @include respond(s-screen) {
-    .mob-dev {
-        .section-title {
-            padding-top: 3.2rem;
-            height: 40rem;
-            align-items: center;
+	.mob-dev {
+		.section-title {
+			padding-top: 3.2rem;
+			height: 40rem;
+			align-items: center;
 
-            .img-wrapper {
-                margin: 0 -10rem;
-                height: 75%;
-            }
+			.img-wrapper {
+				margin: 0 -15rem;
+				height: 75%;
+			}
 
-            .title-group {
-                >div {
-                    max-width: 4rem;
-                    max-height: 2.4rem;
-                }
+			.title-group {
+				>div {
+					max-width: 4rem;
+					max-height: 2.4rem;
+				}
 
-                &:first-of-type {
-                    h2 {
-                        +div {
-                            bottom: -4rem;
-                        }
-                    }
-                }
+				&:first-of-type {
+					h2 {
+						+div {
+							bottom: -4rem;
+						}
+					}
+				}
 
-                &:last-of-type {
-                    h2 {
-                        +div {
-                            top: -2.5rem;
-                        }
-                    }
-                }
-            }
-        }
+				&:last-of-type {
+					h2 {
+						+div {
+							top: -2.5rem;
+						}
+					}
+				}
+			}
+		}
 
-        .block-wrapper {
-            .block-group {
-                flex-direction: column;
+		.block-wrapper {
+			padding-top: $L;
 
-                .group-item {
-                    width: 100%;
-                }
-            }
-        }
+			.block-group {
+				flex-direction: column;
 
-        .mob-application {
-            h4 {
-                padding-bottom: 3.2rem;
-            }
+				.group-item {
+					width: 100%;
 
-            .card-wrapper {
-                .application-item {
-                    min-width: unset;
-                    width: 100%;
-                }
-            }
-        }
+					.img-wrapper {
+						max-width: 4.8rem;
+						max-height: 4.8rem;
+						margin-right: $XS2 ;
+					}
+				}
+			}
+		}
 
-        .choose {
-            .choose-warpper {
-                .item {
-                    width: 100%;
-                    min-width: unset;
-                }
-            }
-        }
-    }
+		.mob-application {
+			padding-top: $XL;
+
+			h4 {
+				padding-bottom: $M;
+			}
+
+			.card-wrapper {
+				padding-bottom: $XL;
+
+				.application-item {
+					min-width: unset;
+					width: 100%;
+					padding: $M $S;
+
+					.item-top {
+						>div {
+							&:first-of-type {
+								max-width: 4.8rem;
+								max-height: 4.8rem;
+							}
+						}
+					}
+
+					.item-body {
+						p.med {
+							margin-bottom: $XS2;
+						}
+					}
+				}
+			}
+		}
+	}
 }

@@ -1,0 +1,64 @@
+.choose {
+	margin-bottom: $XL2;
+
+	h4 {
+		color: $dark;
+		text-align: center;
+		margin-bottom: $L;
+	}
+
+	.choose-warpper {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+
+		.item {
+			width: calc(33.33% - $M);
+			min-width: 28.8rem;
+			background: #F3F6FB;
+			box-shadow: 0px 4px 10px rgba(140, 155, 185, 0.14),
+				0px 1px 10px rgba(140, 155, 185, 0.12),
+				0px 2px 10px rgba(140, 155, 185, 0.2);
+			border-radius: $XS2;
+			margin: 0 $XS;
+			margin-bottom: $M;
+			background: url(/assets/images/mob-dev/choose-bg.svg) center/cover no-repeat;
+			padding: 2.4rem;
+
+			p {
+				color: $dark;
+
+				&.big {
+					margin-bottom: $XS;
+				}
+
+				&.med {
+					line-height: 150%;
+				}
+			}
+		}
+	}
+}
+
+@include respond(m-screen) {
+	.choose {
+		margin-bottom: $XL;
+	}
+}
+
+@include respond(s-screen) {
+	.choose {
+		margin-bottom: $L;
+
+		h4 {
+			margin-bottom: $M;
+		}
+
+		.choose-warpper {
+			.item {
+				width: 100%;
+				min-width: unset;
+			}
+		}
+	}
+}

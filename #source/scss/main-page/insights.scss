@@ -1,5 +1,6 @@
 .insights {
-	padding: $XL3 0;
+	height: 100vh;
+	min-height: 75rem;
 
 	h3 {
 		margin-bottom: $L ;
@@ -18,6 +19,9 @@
 
 @include respond(s-screen) {
 	.insights {
+		height: auto;
+		padding: $XL 0;
+
 		.card-wrapper {
 			flex-direction: column;
 			margin: 0;

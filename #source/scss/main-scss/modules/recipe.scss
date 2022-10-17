@@ -1,0 +1,138 @@
+.recipe {
+	margin-bottom: $XL3;
+
+	h4 {
+		margin-bottom: $L;
+		color: $dark;
+		text-align: center;
+	}
+
+	.group-column {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 4.5rem;
+			right: 2.3rem;
+			width: .2rem;
+			background: $blue;
+			animation: animateLineHeight 1s linear;
+			animation-fill-mode: forwards;
+			z-index: 2;
+		}
+
+		.item {
+			width: 100%;
+			min-height: 7.2rem;
+			margin-bottom: $M;
+			background: $bright-blue;
+			border-radius: $XS;
+			padding: $S $XL;
+			position: relative;
+			display: flex;
+			align-items: center;
+
+			span {
+				position: absolute;
+				top: -40%;
+				left: 1.5rem;
+				line-height: 1;
+				font-weight: 900;
+				font-size: 15.4rem;
+				color: rgb(254 254 254 / 15%);
+			}
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+
+			.pip {
+				position: absolute;
+				top: 50%;
+				right: 1.6rem;
+				width: 1.6rem;
+				height: 1.6rem;
+				transform: translateY(-50%);
+				transition: all .3s ease;
+				z-index: 2;
+
+				&:before {
+					content: url(/assets/images/icons/pip-white-blue.svg);
+					width: inherit;
+					height: inherit;
+				}
+
+				&.left {
+					left: 1.6rem;
+					right: auto;
+				}
+			}
+		}
+	}
+}
+
+@include respond(m-screen) {
+	.recipe {
+		margin-bottom: $XL2;
+
+		.group-column {
+			&:before {
+				top: 4rem;
+				animation: animateLineHeightTable 1s linear;
+				animation-fill-mode: forwards;
+			}
+
+			.item {
+				margin-bottom: $S;
+			}
+		}
+	}
+}
+
+@include respond(s-screen) {
+	.recipe {
+		margin-bottom: $XL;
+
+		h4 {
+			margin-bottom: $M;
+		}
+
+		.group-column {
+			&:before {
+				content: none;
+			}
+
+			.item {
+				margin-bottom: $S;
+				padding: $XS $S;
+
+				.pip {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+@keyframes animateLineHeight {
+	0% {
+		height: 0%;
+	}
+
+	100% {
+		height: calc(100% - 9rem);
+	}
+}
+
+@keyframes animateLineHeightTable {
+	0% {
+		height: 0%;
+	}
+
+	100% {
+		height: calc(100% - 7.8rem);
+	}
+}
