@@ -11,7 +11,7 @@
 			left: 0;
 			right: 0;
 			bottom: 0;
-			background: rgba($white, .7);
+			background: rgba($white, 0.7);
 			z-index: 1;
 		}
 
@@ -30,7 +30,7 @@
 
 			h2 {
 				&:first-of-type {
-					margin-right: .8rem;
+					margin-right: 0.8rem;
 				}
 			}
 		}
@@ -51,7 +51,6 @@
 			color: $dark-blue;
 			text-align: center;
 		}
-
 	}
 
 	.block-group {
@@ -60,7 +59,7 @@
 		margin: 0 (-$XS);
 		margin: $XL3 0;
 
-		>div {
+		> div {
 			width: calc(50% - $XS);
 			margin: 0 $XS;
 		}
@@ -104,8 +103,8 @@
 				top: 20%;
 				left: 0;
 				width: 100%;
-				height: .1rem;
-				border-bottom: 1px dashed #0B273A;
+				height: 0.1rem;
+				border-bottom: 1px dashed #0b273a;
 				z-index: -1;
 			}
 
@@ -114,7 +113,7 @@
 				background-color: $white;
 
 				.item-top {
-					background: linear-gradient(87.95deg, #0071BC 0%, #00C0F3 100%);
+					background: linear-gradient(87.95deg, #0071bc 0%, #00c0f3 100%);
 					border-radius: $S;
 					text-align: center;
 					display: inline-flex;
@@ -153,7 +152,8 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				background: url(/assets/images/staff/arr-hiring.svg) center/contain no-repeat;
+				background: url(/assets/images/staff/arr-hiring.svg) center/contain
+					no-repeat;
 
 				p {
 					color: $blue;
@@ -173,8 +173,10 @@
 				align-items: flex-start;
 				flex-direction: column;
 				margin: 0 $XS;
-				background: #F3F6FB;
-				box-shadow: 0px 4px 10px rgba(140, 155, 185, 0.14), 0px 1px 10px rgba(140, 155, 185, 0.12), 0px 2px 10px rgba(140, 155, 185, 0.2);
+				background: #f3f6fb;
+				box-shadow: 0px 4px 10px rgba(140, 155, 185, 0.14),
+					0px 1px 10px rgba(140, 155, 185, 0.12),
+					0px 2px 10px rgba(140, 155, 185, 0.2);
 				border-radius: $XS2;
 				padding: $M;
 
@@ -184,7 +186,7 @@
 					margin-bottom: $S;
 
 					p {
-						background: linear-gradient(87.95deg, #0071BC 0%, #00C0F3 100%);
+						background: linear-gradient(87.95deg, #0071bc 0%, #00c0f3 100%);
 						-webkit-background-clip: text;
 						-webkit-text-fill-color: transparent;
 						margin-left: $XS;
@@ -233,7 +235,7 @@
 			flex-direction: column;
 			margin: $XL2 0;
 
-			>div {
+			> div {
 				width: 100%;
 				margin: 0;
 			}
@@ -260,7 +262,7 @@
 
 			.hiring-block {
 				flex-direction: column;
-				margin-bottom: $XL2 ;
+				margin-bottom: $XL2;
 
 				&::before {
 					content: none;
@@ -278,7 +280,8 @@
 					left: -9rem;
 					width: 9.6rem;
 					height: 15rem;
-					background: url(/assets/images/staff/arr-hiring-tablet.svg) left/contain no-repeat;
+					background: url(/assets/images/staff/arr-hiring-tablet.svg)
+						left/contain no-repeat;
 
 					p {
 						margin-bottom: 0;
@@ -290,7 +293,7 @@
 
 			.out-hiring {
 				display: flex;
-				margin: 0 ;
+				margin: 0;
 				margin-bottom: $XL3;
 
 				.hiring-card {
@@ -299,8 +302,10 @@
 					align-items: flex-start;
 					flex-direction: column;
 					margin: 0 $XS;
-					background: #F3F6FB;
-					box-shadow: 0px 4px 10px rgba(140, 155, 185, 0.14), 0px 1px 10px rgba(140, 155, 185, 0.12), 0px 2px 10px rgba(140, 155, 185, 0.2);
+					background: #f3f6fb;
+					box-shadow: 0px 4px 10px rgba(140, 155, 185, 0.14),
+						0px 1px 10px rgba(140, 155, 185, 0.12),
+						0px 2px 10px rgba(140, 155, 185, 0.2);
 					border-radius: $XS2;
 					padding: $M;
 
@@ -310,7 +315,7 @@
 						margin-bottom: $S;
 
 						p {
-							background: linear-gradient(87.95deg, #0071BC 0%, #00C0F3 100%);
+							background: linear-gradient(87.95deg, #0071bc 0%, #00c0f3 100%);
 							-webkit-background-clip: text;
 							-webkit-text-fill-color: transparent;
 							margin-left: $XS;
@@ -365,12 +370,33 @@
 			.hiring-block {
 				margin-bottom: $XL;
 
+				.hiring-item {
+					&:last-of-type {
+						margin-bottom: 0;
+					}
+				}
+
 				.arr-chose {
 					left: -5rem;
-					background: url(/assets/images/staff/arr-hiring-mob.svg) left/contain no-repeat;
+					background: url(/assets/images/staff/arr-hiring-mob.svg) left/contain
+						no-repeat;
 
 					p {
 						margin-left: $M;
+					}
+				}
+			}
+
+			.out-hiring {
+				flex-direction: column;
+				margin-bottom: $XL;
+
+				.hiring-card {
+					width: 100%;
+					margin: 0 0 $S;
+
+					&:last-of-type {
+						margin-bottom: 0;
 					}
 				}
 			}

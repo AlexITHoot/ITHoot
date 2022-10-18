@@ -1,13 +1,12 @@
 // Mixins
-@import "main-scss/mixins.scss";
+@import 'main-scss/mixins.scss';
 
 // Resettings, General styles
-@import "main-scss/variables.scss";
-@import "main-scss/fonts.scss";
-@import "main-scss/typography.scss";
-@import "main-scss/null.scss";
-@import "main-scss/btn.scss";
-
+@import 'main-scss/variables.scss';
+@import 'main-scss/fonts.scss';
+@import 'main-scss/typography.scss';
+@import 'main-scss/null.scss';
+@import 'main-scss/btn.scss';
 
 body,
 html {
@@ -68,40 +67,42 @@ body {
 }
 
 // Connecting pages style
-@import "main-scss/header.scss";
-@import "main-scss/footer.scss";
-@import "main-scss/swiper.scss";
-@import "main-scss/accordion.scss";
-@import "main-scss/form.scss";
-@import "main-scss/global.scss";
+@import 'main-scss/header.scss';
+@import 'main-scss/footer.scss';
+@import 'main-scss/swiper.scss';
+@import 'main-scss/accordion.scss';
+@import 'main-scss/form.scss';
+@import 'main-scss/global.scss';
 
-@import "main-scss/modules/card.scss";
-@import "main-scss/modules/choose.scss";
-@import "main-scss/modules/contact-block.scss";
-@import "main-scss/modules/recipe.scss";
-@import "main-scss/modules/tech-stack.scss";
+@import 'main-scss/modules/card.scss';
+@import 'main-scss/modules/choose.scss';
+@import 'main-scss/modules/contact-block.scss';
+@import 'main-scss/modules/recipe.scss';
+@import 'main-scss/modules/tech-stack.scss';
 
-@import "main-page/prew-page.scss";
-@import "main-page/statistics.scss";
-@import "main-page/innovations.scss";
-@import "main-page/solution.scss";
-@import "main-page/insights.scss";
+@import 'main-page/prew-page.scss';
+@import 'main-page/statistics.scss';
+@import 'main-page/innovations.scss';
+@import 'main-page/solution.scss';
+@import 'main-page/insights.scss';
 
-@import "projects/projects.scss";
+@import 'projects/projects.scss';
 
-@import "about/about.scss";
+@import 'about/about.scss';
 
-@import "careers/careers.scss";
-@import "careers/write-us.scss";
+@import 'careers/careers.scss';
+@import 'careers/write-us.scss';
 
-@import "blog/blog.scss";
+@import 'blog/blog.scss';
 
-@import "contact/contact.scss";
+@import 'contact/contact.scss';
 
-@import "thanks/thanks.scss";
+@import 'thanks/thanks.scss';
 
-@import "web-dev/web-dev.scss";
+@import 'web-dev/web-dev.scss';
 
-@import "mob-dev/mob-dev.scss";
+@import 'mob-dev/mob-dev.scss';
 
-@import "staff/staff.scss";
+@import 'staff/staff.scss';
+
+@import 'ui-ux/ui-ux.scss';
