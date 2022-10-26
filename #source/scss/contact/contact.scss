@@ -1,5 +1,5 @@
 .contact {
-	background: linear-gradient(87.95deg, #0071BC 0%, #00C0F3 100%);
+	background: linear-gradient(87.95deg, #0071bc 0%, #00c0f3 100%);
 	height: calc(100vh - 9.8rem - 30.9rem);
 	min-height: 70rem;
 
@@ -15,7 +15,6 @@
 	}
 
 	.contact-part {
-
 		&:nth-of-type(1) {
 			width: 60%;
 			padding-right: $L;
@@ -32,7 +31,6 @@
 		h5 {
 			margin-bottom: $L;
 		}
-
 
 		.group-wrapper {
 			display: flex;
@@ -82,7 +80,6 @@
 				}
 			}
 		}
-
 
 		.contact-info {
 			display: flex;

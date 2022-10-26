@@ -1,0 +1,115 @@
+.startap {
+	.preview {
+		background: url(/assets/images/startap-dev/startup-bg.jpg) center/cover
+			no-repeat;
+		height: calc(100vh - $header-height);
+		margin-top: $header-height;
+		min-height: 45.6rem;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba($dark-blue, 0.7);
+			z-index: 0;
+		}
+
+		h2 {
+			text-align: left;
+			margin: auto auto $XL 0;
+			z-index: 2;
+		}
+	}
+
+	.startap-partner {
+		margin-top: $XL3;
+
+		> h4 {
+			color: $dark-blue;
+			margin-bottom: $S;
+			text-align: center;
+		}
+
+		p {
+			color: $dark;
+			text-align: center;
+		}
+
+		.startap-parts {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			margin-top: $XL;
+			margin-bottom: (-$XL2);
+
+			.item {
+				width: 33.33%;
+				display: flex;
+				align-items: center;
+				flex-direction: column;
+				padding: 0 $XS2;
+				margin-bottom: $XL2;
+
+				> div {
+					max-width: 14.4rem;
+					max-height: 14.4rem;
+
+					img {
+						width: 100%;
+						height: 100%;
+					}
+				}
+
+				p {
+					margin-top: $M;
+				}
+			}
+		}
+	}
+}
+
+@include respond(m-screen) {
+	.startap {
+		.startap-partner {
+			margin-top: $XL2;
+
+			.startap-parts {
+				.item {
+					width: 50%;
+					margin-bottom: $XL;
+				}
+			}
+		}
+	}
+}
+
+@include respond(s-screen) {
+	.startap {
+		.startap-partner {
+			margin-top: $XL;
+		}
+	}
+}
+
+@include respond(es-screen) {
+	.startap {
+		.startap-partner {
+			.startap-parts {
+				.item {
+					width: 100%;
+					padding: 0;
+					margin-bottom: $L;
+
+					> div {
+						max-width: 13.6rem;
+						max-height: 13.6rem;
+					}
+				}
+			}
+		}
+	}
+}

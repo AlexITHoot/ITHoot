@@ -30,6 +30,18 @@
 			}
 		}
 	}
+
+	&.gradient {
+		.statistics-item {
+			h6 {
+				background: linear-gradient(87.95deg, #0071bc 0%, #00c0f3 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				background-clip: text;
+				text-fill-color: transparent;
+			}
+		}
+	}
 }
 
 @include respond(m-screen) {
